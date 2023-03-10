@@ -1,4 +1,4 @@
-(assert (not (exists ((l1 Int) (l2 Int) (l3 Int) (l4 Int) (u1 Int) (u2 Int) (u3 Int) (u4 Int))
+(assert (not (exists ((l1 Real) (l2 Real) (l3 Real) (l4 Real) (u1 Real) (u2 Real) (u3 Real) (u4 Real))
             (and
                 (and (< l1 u2) (< l2 u1))
                 (and

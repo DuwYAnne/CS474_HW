@@ -11,3 +11,5 @@
 (assert (and (= (f (g c) e) (g c)) (= (f e (g c)) (g c))))
 
 (assert (and (not (= d (g c))) (= (f c d) e) (= (f d c) e)))
+
+(check-sat)

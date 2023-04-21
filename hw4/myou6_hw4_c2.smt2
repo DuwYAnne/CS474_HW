@@ -1,0 +1,31 @@
+(declare-const a1 Real)
+(declare-const a2 Real)
+(declare-const a3 Real)
+(declare-const a4 Real)
+(declare-const b1 Real)
+(declare-const b2 Real)
+(declare-const b3 Real)
+(declare-const b4 Real)
+(declare-const r Real)
+(declare-const s Real)
+(assert 
+    (and
+        (and (and (<= r 1) (>= r 0)) (and (<= s 1) (>= s 0)))
+        (and (forall ((rp Real)) 
+                (implies (and (<= rp 1) (>= rp 0))
+                    (<= 0
+                        (+ (+ (+ (* a1 (* (- r rp) s)) (* a2 (* (- r rp) (- 1 s)))) (* a3 (* (- rp r) s))) (* a4 (* (- rp r) (- 1 s))))
+                    )
+                )
+                
+            ) (forall ((sp Real)) 
+                (implies (and (<= sp 1) (>= sp 0))
+                    (<= 0
+                        (+ (+ (+ (* b1 (* r (- s sp))) (* b2 (* r (- sp s)))) (* b3 (* (- 1 r) (- s sp)))) (* b4 (* (- 1 r) (- sp s))))
+                    )
+                )
+            )
+        )
+    )
+)
+(apply qe)

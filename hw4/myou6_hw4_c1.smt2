@@ -8,8 +8,6 @@
 (declare-const b4 Real)
 (declare-const r Real)
 (declare-const s Real)
-(assert (and (<= r 1) (>= r 0)))
-(assert (and (<= s 1) (>= s 0)))
 (assert 
     (and
         (and (and (<= r 1) (>= r 0)) (and (<= s 1) (>= s 0)))
